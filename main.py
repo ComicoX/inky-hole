@@ -26,7 +26,7 @@ try:
 except:
   queries = '?'
   adsblocked = '?'
-  ratio = '?'
+  ratioblocked = 0.0
 
 font = ImageFont.truetype(FredokaOne, 32)
 
