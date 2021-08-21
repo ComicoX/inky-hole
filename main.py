@@ -22,6 +22,7 @@ try:
   parsed_json = json.loads(json_string)
   adsblocked = parsed_json['ads_blocked_today']
   ratioblocked = parsed_json['ads_percentage_today']
+  dnsqueries = parsed_json['dns_queries_today']
   f.close()
 except:
   queries = '?'
@@ -35,6 +36,7 @@ inky_display.set_border(inky_display.WHITE)
 
 draw.text((10,15), str(adsblocked) + " AD'S", inky_display.RED, font)
 draw.text((10,35), str("%.1f" % round(ratioblocked,2)) + " AD%", inky_display.RED, font)
+draw.text((10,55), str(dnsqueries) + " DNS Req", inky_display.RED, font)
 
 inky_display.set_image(img)
 
